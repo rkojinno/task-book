@@ -1,0 +1,293 @@
+$mainColor: #db3a51;
+$mainColorBg: #c1444f;
+$openColor:#448069;
+$doneColor: #5ece47;
+$cancelledColor: #c75033;
+
+$grey1: #757373;
+$grey2: #4f4b4b;
+
+
+$margin_0: 15px;
+$margin_1: 25px;
+
+$font_xs: 9px;
+$font_s: 12px;
+$font_m: 15px;
+$font_lg: 18px;
+$font_xl: 22px;
+
+
+
+
+// Global Styles..............................
+
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.font_xs {font-size:9px;}
+.font_s{font-size: 12px;}
+.font_md{font-size: 15px;}
+.font_lg{font-size:18px;}
+.font_xl{font-size: 22px;}
+.fat{
+    font-weight: 600;
+}
+
+h1,h2,h3,h4,h5,p{
+    margin: 0;
+    box-sizing: border-box;
+    color: $grey2;
+}
+
+.flex-div{
+    display: flex;
+}
+.flex-g1{
+    flex-grow:1;
+}
+.between{
+    justify-content: space-between;
+}
+.block-el{
+    display: block;
+}
+
+.text-right{
+    text-align: right;
+}
+.mt10{
+    margin-top: 9px;
+}
+.open{
+    color:$openColor;
+}
+.cancelled{
+    color:$cancelledColor;
+}
+.done{
+    color:$doneColor;
+}
+.open-bg{
+    background-color:$openColor;
+}
+.cancelled-bg{
+    background-color:$cancelledColor;
+}
+.done-bg{
+    background-color:$doneColor;
+}
+
+
+// Div Styles.....................................
+
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.app{
+    background-color: white;
+    display: block;
+    min-height: 100vh;
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-right: 2px solid #eae2e2;
+    border-left: 2px solid #eae2e2;
+
+    .logo{
+        width: 268px;
+        padding: 7px;
+        box-sizing: border-box;
+        margin-left: auto;
+        display: block;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+
+    .header-section{
+        background-color: #fff;
+        padding: 15px 25px;
+        border-bottom: #329124 4px solid;
+        margin-right: 0px;
+        margin-left: 0px;
+        box-shadow: 0px 3px 7px rgba(123, 114, 114, 0.3);
+        .page-title{
+            h1{
+                color: #5b5656;
+            }
+        }
+        .menu-nav{
+            button{
+                background-color: transparent;
+                color: $grey1;
+                border: none;
+                font-size: 15px;
+                padding: 0;
+                margin-right: 10px;
+            }
+            .button-active{
+                border-bottom: 2px solid #868484;
+                color: #978282;
+                font-weight: 600;
+            }
+        }
+    }
+    .view-section{
+        padding: $margin_1;
+    }
+    .modal-md1{
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 25px 15px;
+        border-bottom: 2px solid #e6e6e6;
+    }
+    .full-modal{
+        background-color: rgba(87, 82, 82, 0.61);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        .inner{
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            padding: 39px;
+            margin-top: 19vh;
+            border-radius: 7px;
+        }
+    }
+
+    .task-container{
+        display: flex;
+        flex-wrap: wrap;
+        .task-block{
+            background-color: white;
+            padding: 21px;
+            border: 1px solid #e8e7e7;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px rgba(10,10,10,0.2);
+            margin-top: 16px;
+            width: 100%;
+
+        }
+        .task-block-simple{
+            border-bottom: 2px solid #ccbaba;
+            margin-top: 16px;
+            width: 100%;
+            padding-bottom: 7px;
+        }
+    }
+    
+
+
+
+
+}
+
+
+// Component Styles..........................
+
+.input-block{
+    padding:$margin_0;
+    input{
+        width: 100%;
+        border-radius: 3px;
+        border: 1px solid #d0c6c6;
+        padding: 4px 17px;
+        box-sizing: border-box;
+        margin-top: 6px;
+    }
+}
+
+.description-block{
+    margin: $margin_0 0;
+}
+.btn-confirm{
+    background-color: #36a652;
+    padding: 5px 7px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    min-width: 97px;
+    font-size: 14px;
+    margin: 0 5px;
+}
+.btn-cancel{
+    background-color: #a6363f;
+    padding: 5px 7px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    min-width: 97px;
+    font-size: 14px;
+    margin: 0 5px;
+}
+.btn-modal{
+    background-color: #706f7e;
+    padding: 5px 7px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    min-width: 97px;
+    font-size: 14px;
+    margin: 0 5px;
+}
+.btn-filter{
+    background-color: transparent;
+    padding: 7px 19px;
+    border-radius: 3px;
+    border: #2db956 1px solid;
+    color: #58b751;
+    min-width: 109px;
+    font-size: 17px;
+    margin: 7px;
+}
+.btn-filter-active{
+    background-color: #58b751;
+    padding: 7px 19px;
+    border-radius: 3px;
+    border: #58b751 1px solid;
+    color: white;
+    min-width: 109px;
+    font-size: 17px;
+    margin: 7px;
+}
+
+
+
+.sts-block-cancelled{
+    background-color: #c75033;
+    padding: 0 6px 3px;
+    color: white;
+    border-radius: 3px;
+    font-weight: 200;
+}
+.sts-block-done{
+    background-color: $doneColor;
+    padding: 0 6px 3px;
+    color: white;
+    border-radius: 3px;
+    font-weight: 200;
+}
+.sts-block-open{
+    background-color: $openColor;
+    padding: 0 6px 3px;
+    color: white;
+    border-radius: 3px;
+    font-weight: 200;
+}
